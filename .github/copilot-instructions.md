@@ -1,0 +1,1 @@
+Read `AGENTS.md`, `AI_CONTEXT.md` and `DEPLOY.md` before editing this project. Preserve AdClinic's assets, copy, unit invitation behavior, consent-gated tracking and noindex status described there. Never store credentials or private invites in source control. The Vercel link is `.vercel/project.json`; use `README.md` for configuration and deployment.

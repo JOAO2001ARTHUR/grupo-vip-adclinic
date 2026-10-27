@@ -3,3 +3,35 @@
 /* Legibilidade para a leitura em telas pequenas. */
 .hero-description{font-size:15px}.hero-benefits h3{font-size:12px}.hero-benefits p{font-size:11px}.cta{font-size:11px}
 @media(max-width:767px){.hero-description{font-size:14px;line-height:1.65}.hero-benefits h3{font-size:10px}.hero-benefits p{font-size:10px}.cta{font-size:10px}.section-intro>p:last-child,.opportunity-grid p,.steps-support,.steps li p,.trust-copy>p:not(.eyebrow),.faq>div>p:last-child,details p,.final-section>p:not(.eyebrow):not(.microcopy){font-size:14px}summary{font-size:14px}}
+
+
+/* Estilos adicionais para ShinyButton integrado ao tema AdClinic */
+.cta-shiny-wrapper {
+  width: auto;
+  min-height: 58px;
+}
+.cta-shiny-wrapper .arrow {
+  font: 24px Arial, sans-serif;
+  margin-left: 10px;
+  line-height: 1;
+}
+.light-shiny {
+  --shiny-cta-bg: #eee3d0 !important;
+  --shiny-cta-bg-subtle: #e2d4bd !important;
+  --shiny-cta-fg: #32475c !important;
+  --shiny-cta-highlight: #456879 !important;
+  --shiny-cta-highlight-subtle: #bad6da !important;
+}
+.hero-action .cta-shiny-wrapper {
+  max-width: 100%;
+}
+.sticky .cta-shiny-wrapper {
+  width: 100%;
+  min-height: 48px;
+}
+@media(max-width: 767px) {
+  .cta-shiny-wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+}

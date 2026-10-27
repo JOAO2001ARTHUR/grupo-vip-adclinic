@@ -14,6 +14,14 @@ node tests/tracking.cjs
 
 O build gera `out/`. Na Vercel, importar este diretório `vip` como raiz do projeto Next.js.
 
+## Outras IAs e deploy Vercel
+
+Abra esta pasta como workspace na outra IA e peça que leia `AGENTS.md` e `DEPLOY.md`. `.vercel/project.json` contém somente os identificadores da equipe/projeto, para que a CLI aponte ao projeto existente; não é uma credencial. Esta publicação foi criada por upload estático e o projeto Vercel ainda não está conectado a um GitHub, então um commit sozinho não atualiza o site.
+
+Após as alterações, execute `npm ci`, `npm run build` e `npm run typecheck`. Publique com `npx vercel whoami` e `npm run deploy:vercel` a partir desta pasta. Em uma máquina sem sessão, `npx vercel login` abre a autenticação; o dono conclui o login no navegador. O uso do plano Hobby segue sujeito aos limites da conta Vercel.
+
+Não guarde tokens ou senhas para outras IAs nesta pasta. Para automação sem navegador, o proprietário pode emitir um Vercel token e adicioná-lo ao gerenciador de segredos do agente/CI como `VERCEL_TOKEN`. Passe-o somente pelo ambiente do processo, nunca pelo prompt, linha de comando visível, `.env`, histórico Git ou logs. Se não houver agente/CI com cofre de segredos, cada máquina deve usar sua sessão autenticada pelo proprietário.
+
 ## Ativar uma unidade
 
 Editar `src/lib/config.ts`. Cada unidade tem identificador, nome, cidade, convite, campanha e variante. Rotas: `/`, `/vip/pinhais/`, `/vip/ponta-grossa/`. Novas chaves geram novas rotas no próximo build. A raiz é uma prévia genérica: anúncios locais devem apontar à rota da unidade.
